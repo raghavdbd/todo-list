@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>
+            TODO App
+        </title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        
+        <link rel ="stylesheet" href = "/css/home.css">
+    </head>
+
+    <body>
+        <div class = "app-interface">
+            <header class = "position">
+                <h1 class = heading>
+                    <span class = "main-heading">
+                    <i class="fas fa-clipboard-list"></i>
+                    TODO </span> App
+                </h1>
+            </header>
+            
+
+            <div class = "form-body">
+                <form action="/take-action" method="POST">
+                    <div class = "form-entry">
+                        <label for="" class = "form-text-style"> DESCRIPTION </label> <br>
+                        <input name = "description" class = "input-style" type="text" placeholder=" What do you need to do? " >
+                    </div>
+                    <div class ="form-entry">
+                        <div class = "line-2" style="padding : 2.2px">
+                            <label for="" class = "form-text-style"> CATEGORY </label> <br>
+                            <select class = "input-style" name="category" id="">
+                                <option value="null">Choose a Category </option>
+                                <option value="Personal"> Personal </option>
+                                <option value="Work"> Work </option>
+                                <option value="School"> School </option>
+                                <option value="Cleaning"> Cleaning </option>
+                                <option value="Others"> Others </option>
+                            </select>
+                        </div>
+                        <div class = "line-2">
+                            <label for="" class = "form-text-style"> DUE DATE </label> <br>
+                            <input name = "due_date" class = "input-style" type="date" placeholder="dd/mm/yyyy">
+                        </div>    
+                    </div>
+                    
+                    <div class = "position">
+                        <button type ="submit" class = "button-dimen add-btn" formaction="take-action/add">
+                            <i class="fas fa-plus"></i>
+                            ADD TASK
+                        </button>
+                    </div>
+                </form>
+
+                <form action="/show-todo" method="POST">
+                    <div class = "position">
+                        <button class = "button-dimen delete-btn" formaction="/show-todo/delete">
+                            <i class="fas fa-trash"></i>
+                            DELETE TASKS
+                        </button>
+                    </div>
+                </div> 
+                    <div class = 'task-list'>
+                        <ul>
+                            <% for(let task of tasks_list) { %> 
+                                <div class = 'task-item'>
+                                    <li>
+                                        <div class = 'per-10 prop'>
+                                            <input type= "checkbox" name = "checked" value = "<%= task._id %>">
+                                        </div>
+                                        <div class = 'per-60 prop'>
+                                            <p class = "list-desc"> <b class = "black"> <%= task.description %> </b> <br> <i class="fas fa-calendar-alt"></i> <%= task.due_date %> </p>
+                                        </div>
+                                        <div class = 'per-20 prop'>
+                                           <button class = 'list-cate' formaction="/show-todo/go-back" </button> <%= task.category %> </button>
+                                        </div>  
+                                    </li>    
+                                </div>
+                            <% } %>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+
+            
+      
+        </div>
+    </body>
+</html>

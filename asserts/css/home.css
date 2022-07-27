@@ -1,0 +1,134 @@
+/* General Classes */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("../images/todo_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ /* Class to position a item at center. */
+.position {
+    text-align: center;
+}
+
+/* Main application window */
+.app-interface {
+    margin-top: 10vh;
+    width: 50vw;
+    position: relative;
+    left: 22%;
+    border: 0px solid #1367ea;
+    background-color: white;
+    box-shadow:  0px 0px .4rem 0.1rem #adccff inset;
+    padding: 4% 2% 1% 2%;
+}
+
+ /* Heading All over. */
+.heading {
+    color: #cb5555;
+    font-family: cursive;
+}
+
+/* Heading on TODO */
+.main-heading {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #1367ea;
+}
+
+/* Main Form */
+/* Border and outline of input box are removed. */
+input, select {
+    border: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+/* Form Styles */
+
+.input-style {
+    padding-left: 10px;
+}
+.form-text-style {
+    font-size: 0.8rem;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+.line-2 {
+    display: inline-block;
+    width : 48.5%;
+    border : 1px solid black;
+}
+.add-btn {
+    background-color: #a0afc5;
+}
+
+.delete-btn {
+    background-color: #d5aaaa;
+}
+
+.button-dimen {
+    font-size: 0.8rem;
+    border-radius: 0.8rem;
+    padding: 5px;
+    color: #000000;
+    font-weight: bolder;
+    margin: 1rem;
+    border: -3px solid black;
+}
+
+.form-entry {
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* height: 3rem; */
+    padding: 5px;
+}
+
+.list-cate {
+    background-color: #d6d6d6;
+    color: #000000;
+    border-radius: 0.8rem;
+    font-weight: bolder;
+    border: -2px solid black;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    width : 6rem;
+    height : 2rem;
+
+}
+
+.list-desc {
+    font-size: .8rem;
+    color : grey;
+    line-height: 1.1rem;
+}
+
+.prop {
+    display: inline-block;
+    padding: 0 1%;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.per-60 { 
+    display: inline-block;
+    width: 60%; 
+}
+.per-20 {
+    display: inline-block;
+    width: 20%;
+}
+.per-10 {
+    display: inline-block;
+    width: 10%;
+}
+
+.black {
+    color : black;
+}
