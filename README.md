@@ -1,4 +1,5 @@
 # todo-list
 A todo list app in which we can add our daily task
 
-https://user-images.githubusercontent.com/64882381/181237588-78681307-baa9-4b55-95f7-1fd86f5697e9.png
+![Screenshot (88)](https://user-images.githubusercontent.com/64882381/181238085-9b9ff539-8d21-4e83-8496-faedc7bd7679.png)
+
